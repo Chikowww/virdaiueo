@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <title>Website Statis</title>
+    <style>
+        body.login {
+            background-image: url('ipa6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        body.main-content {
+            background-image: url('twices.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #loginForm {
+            background-color: rgba(121, 115, 115, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h2, h1 {
+            color: white;
+        }
+
+        .table {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        #userForm {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #userData {
+            text-align: center;
+        }
+
+        .about-text {
+            color: white; /* Mengatur warna teks menjadi putih */
+        }
+    </style>
+</head>
+
+<body class="login">
+    <div id="loginForm">
+        <form id="login" onsubmit="return handleLogin(event)">
+            <h2 class="text-center">Login</h2>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">WELCOME</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#News">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Form">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="Home" class="pt-5">
+            <div class="container mt-5">
+                <h1 class="text-center">TWICES</h1>
+                <p class="text-center">IPA 6</p>
+            </div>
+        </section>
+
+        <section id="News" class="pt-5">
+            <div class="container mt-5">
+                <h2 class="text-center">News</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Judul</th>
+                                <th>Tanggal</th>
+                                <th>Deskripsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Reunian</td>
+                                <td>12 oktober 2024</td>
+                                <td>Pantai Seruni</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Acara</td>
+                                <td>15 oktober 2024</td>
+                                <td>Allu Bantaeng</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Acara</td>
+                                <td>21 oktober 2024</td>
+                                <td>SMAN 1 BANTAENG</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="About pt-5">
+            <div class="container">
+                <div class="row text-center mb-3">
+                    <div class="col">
+                        <h2 class="about-text">About</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Aspek</th>
+                                        <th>Detail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nama Kelas</td>
+                                        <td>IPA 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fokus</td>
+                                        <td>Ilmu Pengetahuan Alam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Materi</td>
+                                        <td>Biologi, Fisika, Kimia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kegiatan</td>
+                                        <td>Eksperimen</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="about-text">
+                            Kelas IPA 6 adalah salah satu kelas di tingkat sekolah menengah pertama yang fokus pada pendidikan IPA (Ilmu Pengetahuan Alam). Di kelas ini, siswa diajarkan berbagai materi ilmu pengetahuan alam seperti biologi, fisika, dan kimia. Mereka juga belajar tentang konsep-konsep dasar IPA yang penting untuk memahami fenomena alam sekitar. Selain itu, kelas IPA 6 juga memasukkan aktivitas eksperimen untuk memperkuat pemahaman siswa terhadap teori yang diajarkan. Kegiatan praktikum ini tidak hanya membuat pembelajaran menjadi lebih menarik, tetapi juga memberikan pengalaman langsung kepada siswa dalam menerapkan teori yang telah dipelajari. Dengan cara ini, siswa diharapkan dapat mengembangkan keterampilan berpikir kritis dan analitis, serta meningkatkan rasa ingin tahu mereka terhadap dunia sains. Kelas IPA 6 juga sering melakukan proyek kelompok yang mendorong kolaborasi antar siswa, sehingga mereka dapat belajar bekerja sama dan berbagi pengetahuan dalam menyelesaikan tugas-tugas ilmiah.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Form" class="pt-5">
+            <div class="container mt-5">
+                <h2 class="text-center">Form</h2>
+                <form id="userForm" onsubmit="return handleSubmit(event)" id="userForm">
+                    <div class="mb-3">
+                        <label for='name' class='form-label'>Nama</label> 
+                        <input type='text' required id='name' class="form-control" />
+                    </div> 
+                    <div class='mb-3'>
+                      <label for='email' class='form-label'>Email</label> 
+                      <input type='email' required id='email' class="form-control" />
+                    </div> 
+                    <button type='submit' class="btn btn-primary">Kirim</button> 
+                </form> 
+                <div id='userData' class="mt-5 hidden"> 
+                    Data yang Anda Kirimkan: 
+                    <p>Nama: <span id='displayName'></span></p> 
+                    <p>Email: <span id='displayEmail'></span></p> 
+                </div> 
+            </div> 
+        </section>
+
+        <section id='Contact' class="pt-5"> 
+            <div class="container mt-5"> 
+                <p class="text-center">auliannisavirda@gmail.com</p> 
+            </div> 
+        </section>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username && password) {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("mainContent").classList.remove("hidden");
+                document.body.className = "main-content";
+            } else {
+                alert("Username atau password salah!");
+            }
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            document.getElementById("displayName").textContent = name;
+            document.getElementById("displayEmail").textContent = email;
+
+            document.getElementById("userData").classList.remove("hidden");
+
+            document.getElementById("userForm").reset();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
